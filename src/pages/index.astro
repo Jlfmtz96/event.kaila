@@ -1,0 +1,21 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+import Gallery from '../components/Gallery.astro';
+import Reception from '../components/Reception.astro';
+import Attendance from '../components/Attendance.astro';
+---
+
+<Layout title="Welcome to Astro.">
+	<main>
+		<Hero />
+		<div class="uppercase text-center my-12 text-xl font-semibold">
+			<p>Hay momentos en la vida que representan un antes y un después.</p>
+			<p>El comienzo y el fin de una etapa, y lo que los hace realmente especial, <br>son las personas con las que se comparten. Quiero que tu seas una de ellas</p>
+		</div>
+		<Gallery />
+		<Reception />
+		<Attendance />
+	</main>
+</Layout>
+

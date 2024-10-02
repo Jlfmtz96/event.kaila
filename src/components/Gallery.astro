@@ -1,0 +1,123 @@
+---
+---
+
+<div class="text-center">
+    <h2 class="uppercase text-big-caslon text-5xl golden-text">Galería</h2>
+</div>
+
+<!-- Swiper -->
+<div class="swiper mySwiper mt-4" client:load>
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <div class="polaroid">
+          <img src="/assets/IMG-20241001-WA0046.jpg" alt="Slide 1" class="h-full w-full object-cover" />
+          <div class="polaroid-caption"></div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="polaroid">
+          <img src="/assets/IMG-20241001-WA0047.jpg" alt="Slide 2" class="h-full w-full object-cover" />
+          <div class="polaroid-caption"></div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="polaroid">
+          <img src="/assets/IMG-20241001-WA0048.jpg" alt="Slide 3" class="h-full w-full object-cover" />
+          <div class="polaroid-caption"></div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="polaroid">
+          <img src="/assets/IMG-20241001-WA0049.jpg" alt="Slide 4" class="h-full w-full object-cover" />
+          <div class="polaroid-caption"></div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="polaroid">
+          <img src="/assets/IMG-20241001-WA0050.jpg" alt="Slide 5" class="h-full w-full object-cover" />
+          <div class="polaroid-caption"></div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="polaroid">
+          <img src="/assets/IMG-20241001-WA0051.jpg" alt="Slide 6" class="h-full w-full object-cover" />
+          <div class="polaroid-caption"></div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="polaroid">
+          <img src="/assets/IMG-20241001-WA0052.jpg" alt="Slide 7" class="h-full w-full object-cover" />
+          <div class="polaroid-caption"></div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="polaroid">
+          <img src="/assets/IMG-20241001-WA0053.jpg" alt="Slide 8" class="h-full w-full object-cover" />
+          <div class="polaroid-caption"></div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="polaroid">
+          <img src="/assets/IMG-20241001-WA0054.jpg" alt="Slide 9" class="h-full w-full object-cover" />
+          <div class="polaroid-caption"></div>
+        </div>
+      </div>
+    </div>
+    <!-- <div class="swiper-pagination"></div> -->
+  </div>
+
+<style>
+    .swiper {
+      width: 100%;
+      height: 100%;
+    }
+  
+    .swiper-slide {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 10px; /* Espacio alrededor de cada slide */
+      background: transparent; /* Fondo transparente para el efecto Polaroid */
+    }
+  
+    .polaroid {
+      background: #fff; /* Fondo blanco para el marco */
+      border: 10px solid #fff; /* Marco blanco */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para darle profundidad */
+      padding: 10px; /* Espacio interno del marco */
+      border-radius: 5px; /* Bordes redondeados */
+      display: flex;
+      flex-direction: column;
+      align-items: center; /* Alineación centrada */
+      justify-content: center; /* Alineación centrada */
+    }
+  
+    .polaroid img {
+      display: block;
+      max-width: 100%; /* Ancho máximo de la imagen */
+      height: 300px; /* Alto automático para mantener la proporción */
+      width: 300px;
+      object-fit: cover; /* Asegura que la imagen cubra el área */
+    }
+  
+    .polaroid-caption {
+      padding: 16px;
+      text-align: center; /* Centrar el texto */
+    }
+  </style>
+
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" client:load></script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const swiper = new Swiper(".mySwiper", {
+      slidesPerView: 3,
+      spaceBetween: 30,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+    });
+  });
+</script>

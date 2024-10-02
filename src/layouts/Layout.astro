@@ -1,0 +1,84 @@
+---
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+		<!-- Estilos de Swiper -->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body>
+		<slot />
+	</body>
+</html>
+<style is:global>
+
+	html {
+		font-family: 'Montserrat', system-ui, sans-serif;
+	}
+	body {
+		background-image: url('/assets/fondo_xv.png'); /* Ruta de tu imagen de fondo */
+		background-size: cover; /* La imagen cubrirá toda el área */
+		background-position: center; /* Centra la imagen */
+		background-repeat: no-repeat; /* No repetirá la imagen */
+		margin: 0; /* Elimina margenes del body */
+	}
+	code {
+		font-family:
+			Menlo,
+			Monaco,
+			Lucida Console,
+			Liberation Mono,
+			DejaVu Sans Mono,
+			Bitstream Vera Sans Mono,
+			Courier New,
+			monospace;
+	}
+	@font-face {
+	font-family: 'Baby Dandelia';
+	src: url('/fonts/BabyDandeliaDemo.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+	}
+
+	@font-face {
+	font-family: 'Big Caslon';
+	src: url('/fonts/BigCaslonMedium.ttf') format('truetype');
+	font-weight: 500; /* Ajusta el peso si es necesario */
+	font-style: normal;
+	}
+	/* Para los títulos que usarán Baby Dandelia */
+	.title-baby-dandelia {
+	font-family: 'Baby Dandelia', cursive;
+	}
+
+	/* Para los párrafos o textos que usarán Big Caslon */
+	.text-big-caslon {
+	font-family: 'Big Caslon', serif;
+	}
+
+	.golden-text {
+    background-image: url('/assets/9975084.jpg'); /* Ruta de tu textura dorada */
+    background-size: cover; /* Ajusta la textura para que cubra completamente el texto */
+    background-clip: text;
+    -webkit-background-clip: text; /* Soporte para navegadores WebKit */
+    color: transparent; /* Hace que el texto sea transparente para que se vea la textura */
+    font-weight: bold; /* Opcional: Puedes darle más peso al texto */
+    }
+
+</style>
