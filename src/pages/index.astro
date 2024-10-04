@@ -4,10 +4,11 @@ import Hero from '../components/Hero.astro';
 import Gallery from '../components/Gallery.astro';
 import Reception from '../components/Reception.astro';
 import Attendance from '../components/Attendance.astro';
+import Musicalbtn from '../components/Musicalbtn.astro';
 ---
 
 <Layout title="Welcome to Astro.">
-	<main class="overflow-x-hidden">
+	<main class="overflow-x-hidden relative">
 		<Hero />
 		<div class="uppercase text-center my-12 mx-auto px-4 md:px-0 text-sm md:text-base lg:text-xl font-semibold">
 			<p>Hay momentos en la vida que representan un antes y un después.</p>
@@ -16,6 +17,7 @@ import Attendance from '../components/Attendance.astro';
 		<Gallery />
 		<Reception />
 		<Attendance />
+		<Musicalbtn />
 	</main>
 </Layout>
 
