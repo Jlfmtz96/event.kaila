@@ -2,7 +2,7 @@
 ---
 
 <div class="text-center">
-    <h2 class="uppercase text-big-caslon text-5xl golden-text">Galería</h2>
+    <h2 class="uppercase text-big-caslon text-4xl md:text-5xl golden-text">Galería</h2>
 </div>
 
 <!-- Swiper -->
@@ -118,6 +118,23 @@
         el: ".swiper-pagination",
         clickable: true,
       },
+      breakpoints: {
+        // Pantallas grandes (3 slides)
+        1024: {
+          slidesPerView: 3,
+          spaceBetween: 30,
+        },
+        // Pantallas medianas (2 slides)
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+        // Pantallas pequeñas (1 slide)
+        390: {
+          slidesPerView: 1,
+          spaceBetween: 10,
+        }
+      }
     });
   });
 </script>
