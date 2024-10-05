@@ -1,0 +1,48 @@
+---
+import familias from '../data/familias.json';
+
+// Importar los componentes
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+import Gallery from '../components/Gallery.astro';
+import Reception from '../components/Reception.astro';
+import Attendance from '../components/Attendance.astro';
+import Musicalbtn from '../components/Musicalbtn.astro';
+
+// Implementar getStaticPaths
+export async function getStaticPaths() {
+  // Mapear las familias desde el archivo JSON para generar las rutas
+  return familias.map(familia => ({
+    params: { family: familia.family }
+  }));
+}
+
+// Obtener el parámetro de la URL
+const { family } = Astro.params;
+
+// Encontrar la información de la familia desde el archivo JSON
+const familyData = familias.find(familia => familia.family === family);
+
+// Manejar la familia no encontrada
+if (!familyData) {
+    return { redirect: '/' };
+}
+
+const familyName = family.replace(/-/g, ' '); // Reemplazar guiones por espacios para un formato más legible
+const downloadLink = `/pases/${family}-pases.pdf`; // Enlace dinámico
+---
+
+<Layout title="Welcome to Astro.">
+  <main class="overflow-x-hidden relative">
+    <Hero />
+    <div class="uppercase text-center my-12 mx-auto px-4 md:px-0 text-sm md:text-base lg:text-xl font-semibold">
+      <p>Hay momentos en la vida que representan un antes y un después.</p>
+      <p>El comienzo y el fin de una etapa, y lo que los hace realmente especial, <br>son las personas con las que se comparten. Quiero que tu seas una de ellas</p>
+    </div>
+    <Gallery />
+    <Reception />
+    <!-- Pasar el nombre de la familia y el enlace de descarga como props al componente -->
+    <Attendance family={familyName} downloadLink={downloadLink} />
+    <Musicalbtn />
+  </main>
+</Layout>

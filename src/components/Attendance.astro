@@ -1,19 +1,22 @@
 ---
-
+// Recibir las props de family y downloadLink
+const { family, downloadLink } = Astro.props;
 ---
 
 <div class="my-12">
     <div>
         <h2 class="uppercase text-big-caslon text-4xl md:text-5xl golden-text text-center">Confirmar <br>Asistencia</h2>
         <div class="mt-8 md:text-lg font-light flex flex-col space-y-2 text-center">
-            <p>Favor de confirmar asistencia</p>
+            <p>Haz clic en el botón a continuación para descargar tus pases</p>
         </div>
     </div>
 
     <div class="text-center mt-8">
-        <p class="font-bold md:text-lg">Familia ...</p>
+        <!-- Mostrar el nombre de la familia -->
+        <p class="font-bold md:text-lg uppercase">Familia {family}</p>
         <div class="mt-6">
-            <a href="" target="_blank" class="p-4 rounded-xl border font-bold text-white bg-slate-900">Descargar </a>
+          <!-- Usar el enlace dinámico para descargar los pases -->
+          <a href={downloadLink} target="_blank" class="p-4 rounded-xl border font-bold text-white bg-slate-900">Descargar </a>
         </div>
     </div>
     <div class="border-b w-4/5 border-gray-400 shadow-2xl mt-8 mx-auto"></div>
