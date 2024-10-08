@@ -13,7 +13,7 @@ const { family, downloadLink } = Astro.props;
 
     <div class="text-center mt-8">
         <!-- Mostrar el nombre de la familia -->
-        <p class="font-bold md:text-lg uppercase">Familia {family}</p>
+        <p class="font-bold md:text-lg uppercase">{family}</p>
         <div class="mt-6">
           <!-- Usar el enlace dinámico para descargar los pases -->
           <a href={downloadLink} target="_blank" class="p-4 rounded-xl border font-bold text-white bg-slate-900">Descargar </a>
