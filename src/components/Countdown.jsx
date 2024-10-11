@@ -11,6 +11,7 @@ const Countdown = () => {
       days: '00',
       hours: '00',
       minutes: '00',
+      seconds: '00',
     };
 
     if (difference > 0) {
@@ -18,6 +19,7 @@ const Countdown = () => {
         days: Math.floor(difference / (1000 * 60 * 60 * 24)).toString().padStart(2, '0'),
         hours: Math.floor((difference / (1000 * 60 * 60)) % 24).toString().padStart(2, '0'),
         minutes: Math.floor((difference / 1000 / 60) % 60).toString().padStart(2, '0'),
+        seconds: Math.floor((difference / 1000) % 60).toString().padStart(2, '0'),
       };
     }
 
@@ -37,18 +39,23 @@ const Countdown = () => {
   return (
     <div className="flex space-x-4 text-center text-white">
       <div>
-        <div className="text-4xl font-medium">{timeLeft.days}</div>
-        <div className="uppercase">días</div>
+        <div className="text-4xl font-medium min-w-[50px]">{timeLeft.days}</div>
+        <div className="uppercase text-xs">días</div>
       </div>
-      <div className="text-6xl font-thin">|</div>
+      <div className="text-5xl font-thin">|</div>
       <div>
-        <div className="text-4xl font-medium">{timeLeft.hours}</div>
-        <div className="uppercase">horas</div>
+        <div className="text-4xl font-medium min-w-[50px]">{timeLeft.hours}</div>
+        <div className="uppercase text-xs">horas</div>
       </div>
-      <div className="text-6xl font-thin">|</div>
+      <div className="text-5xl font-thin">|</div>
       <div>
-        <div className="text-4xl font-medium">{timeLeft.minutes}</div>
-        <div className="uppercase">minutos</div>
+        <div className="text-4xl font-medium min-w-[50px]">{timeLeft.minutes}</div>
+        <div className="uppercase text-xs">mins</div>
+      </div>
+      <div className="text-5xl font-thin">|</div>
+      <div>
+        <div className="text-4xl font-medium min-w-[50px]">{timeLeft.seconds}</div>
+        <div className="uppercase text-xs">segs</div>
       </div>
     </div>
   );
