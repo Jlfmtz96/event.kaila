@@ -39,23 +39,23 @@ const Countdown = () => {
   return (
     <div className="flex space-x-4 text-center text-white">
       <div>
-        <div className="text-4xl font-medium min-w-[50px]">{timeLeft.days}</div>
-        <div className="uppercase text-xs">días</div>
+        <div className="text-3xl md:text-4xl font-medium min-w-[40px] md:min-w-[50px]">{timeLeft.days}</div>
+        <div className="uppercase text-[10px] md:text-xs">días</div>
       </div>
-      <div className="text-5xl font-thin">|</div>
+      <div className="text-4xl md:text-5xl font-thin">|</div>
       <div>
-        <div className="text-4xl font-medium min-w-[50px]">{timeLeft.hours}</div>
-        <div className="uppercase text-xs">horas</div>
+        <div className="text-3xl md:text-4xl font-medium min-w-[40px] md:min-w-[50px]">{timeLeft.hours}</div>
+        <div className="uppercase text-[10px] md:text-xs">horas</div>
       </div>
-      <div className="text-5xl font-thin">|</div>
+      <div className="text-4xl md:text-5xl font-thin">|</div>
       <div>
-        <div className="text-4xl font-medium min-w-[50px]">{timeLeft.minutes}</div>
-        <div className="uppercase text-xs">mins</div>
+        <div className="text-3xl md:text-4xl font-medium min-w-[40px] md:min-w-[50px]">{timeLeft.minutes}</div>
+        <div className="uppercase text-[10px] md:text-xs">mins</div>
       </div>
-      <div className="text-5xl font-thin">|</div>
+      <div className="text-4xl md:text-5xl font-thin">|</div>
       <div>
-        <div className="text-4xl font-medium min-w-[50px]">{timeLeft.seconds}</div>
-        <div className="uppercase text-xs">segs</div>
+        <div className="text-3xl md:text-4xl font-medium min-w-[40px] md:min-w-[50px]">{timeLeft.seconds}</div>
+        <div className="uppercase text-[10px] md:text-xs">segs</div>
       </div>
     </div>
   );
